@@ -33,7 +33,35 @@ class BaseMainFrame ( wx.Frame ):
 		self.m_menuItem_file_project_open = wx.MenuItem( self.m_menu_file_project, wx.ID_ANY, u"open", wx.EmptyString, wx.ITEM_NORMAL )
 		self.m_menu_file_project.Append( self.m_menuItem_file_project_open )
 		
+		self.m_menu_file_project.AppendSeparator()
+		
+		self.m_menuItem_file_project_save = wx.MenuItem( self.m_menu_file_project, wx.ID_ANY, u"save", wx.EmptyString, wx.ITEM_NORMAL )
+		self.m_menu_file_project.Append( self.m_menuItem_file_project_save )
+		
+		self.m_menu_file_project.AppendSeparator()
+		
+		self.m_menuItem_file_project_add = wx.MenuItem( self.m_menu_file_project, wx.ID_ANY, u"add", wx.EmptyString, wx.ITEM_NORMAL )
+		self.m_menu_file_project.Append( self.m_menuItem_file_project_add )
+		
 		self.m_menu_file.AppendSubMenu( self.m_menu_file_project, u"project" )
+		
+		self.m_menu_file.AppendSeparator()
+		
+		self.m_menu_file_file = wx.Menu()
+		self.m_menuItem_file_file_new = wx.MenuItem( self.m_menu_file_file, wx.ID_ANY, u"new", wx.EmptyString, wx.ITEM_NORMAL )
+		self.m_menu_file_file.Append( self.m_menuItem_file_file_new )
+		
+		self.m_menu_file_file.AppendSeparator()
+		
+		self.m_menuItem_file_file_open = wx.MenuItem( self.m_menu_file_file, wx.ID_ANY, u"open", wx.EmptyString, wx.ITEM_NORMAL )
+		self.m_menu_file_file.Append( self.m_menuItem_file_file_open )
+		
+		self.m_menu_file_file.AppendSeparator()
+		
+		self.m_menuItem_file_file_save = wx.MenuItem( self.m_menu_file_file, wx.ID_ANY, u"save", wx.EmptyString, wx.ITEM_NORMAL )
+		self.m_menu_file_file.Append( self.m_menuItem_file_file_save )
+		
+		self.m_menu_file.AppendSubMenu( self.m_menu_file_file, u"file" )
 		
 		self.m_menu_file.AppendSeparator()
 		

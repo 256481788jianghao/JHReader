@@ -85,8 +85,12 @@ class BaseMainFrame ( wx.Frame ):
 		
 		bSizer_b1_2 = wx.BoxSizer( wx.VERTICAL )
 		
-		self.m_richText_editor = wx.richtext.RichTextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0|wx.VSCROLL|wx.HSCROLL|wx.NO_BORDER|wx.WANTS_CHARS )
-		bSizer_b1_2.Add( self.m_richText_editor, 1, wx.EXPAND |wx.ALL, 5 )
+		self.m_notebook_main = wx.Notebook( self, wx.ID_ANY, wx.DefaultPosition, wx.DefaultSize, 0 )
+		
+		bSizer_b1_2.Add( self.m_notebook_main, 1, wx.EXPAND |wx.ALL, 5 )
+		
+		self.m_richText_sub_shower = wx.richtext.RichTextCtrl( self, wx.ID_ANY, wx.EmptyString, wx.DefaultPosition, wx.DefaultSize, 0|wx.VSCROLL|wx.HSCROLL|wx.NO_BORDER|wx.WANTS_CHARS )
+		bSizer_b1_2.Add( self.m_richText_sub_shower, 1, wx.EXPAND |wx.ALL, 5 )
 		
 		
 		bSizer_b0.Add( bSizer_b1_2, 1, wx.EXPAND, 5 )

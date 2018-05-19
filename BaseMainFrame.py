@@ -100,8 +100,16 @@ class BaseMainFrame ( wx.Frame ):
 		self.Layout()
 		
 		self.Centre( wx.BOTH )
+		
+		# Connect Events
+		self.Bind( wx.EVT_MENU, self.onMenuItemFileFileNewSelected, id = self.m_menuItem_file_file_new.GetId() )
 	
 	def __del__( self ):
 		pass
+	
+	
+	# Virtual event handlers, overide them in your derived class
+	def onMenuItemFileFileNewSelected( self, event ):
+		event.Skip()
 	
 
